@@ -50,3 +50,19 @@ room['treasure'].s_to = room['narrow']
 #
 # If the user enters "q", quit the game.
 
+quit = False
+while not quit:
+    command = input(
+        "\nMove in a direction! \n(N)orth\n(S)outh\n(E)ast\n(W)est\n(Q)uit\n\nWhat would you like to do: ")
+    command = command.lower().strip()[0]
+# creates an inifinite loop, allows for lower case, upper case, any misclick, is only looking for the first letter to be Q for quit, so if you write Qkjhfbklsjbfoasbf it will still work.
+    if command == 'q':
+        quit = True
+    elif command == 'n':
+        print("NORTH")
+    elif command == 's':
+        print("SOUTH")
+    elif command == 'e':
+        print("EAST")
+    elif command == 'w':
+        print("WEST")
